@@ -6,8 +6,6 @@
                     <div
                         style="color: black; font-size: 26px; margin-top: 20px"
                     >
-                        <!-- <img style="height: 30px; margin-bottom: -5px"
-                            src="../assets/homeLogo.jpg"/> -->
                         南国影城
                     </div>
                 </a>

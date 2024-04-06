@@ -2,9 +2,11 @@
     <div>
       <!-- 海报宣传栏 -->
     <div class="poster-carousel">
-      <el-carousel indicator-position="outside" :interval="5000" height="500">
+      <el-carousel indicator-position="outside" :interval="5000" height="500px"
+                    >
         <el-carousel-item v-for="(item, index) in posterList" :key="index">
-          <img class="poster-image" :src="require(`@/assets/${item}`)" alt="poster" />
+          <img class="poster-image" :src="require(`@/assets/${item}`)" alt="poster" 
+                style="max-width: 80%; max-height: 100%;"/>
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -94,9 +96,26 @@
             </div>
         </div>
         <div style="text-align: center; margin-top: 50px;">
-            <span>对本网站使用进行评分：</span>
-          <el-rate allow-half style="margin-bottom: 20px;">
+            <el-text>
+                对本网站使用进行评分：
+            </el-text>
+            <el-rate  allow-half
+                v-model="value" 
+                :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
             </el-rate>
+        </div>
+        <div class="footerBox">
+            <p>关于南国: <span>关于我们</span> | <span>开发团队</span> |  友情链接: <a href="https://cn.vuejs.org/guide/introduction.html#api-styles"> Vue </a> | <a href="https://element.eleme.cn/#/zh-CN/guide/design">ElementUI</a> | <a href="https://www.axios-http.cn/">Axios</a> | </p>
+            <p>商务合作邮箱: v@163.com  客服电话:10105335   违法和不良信息举报电话:1234567890</p>
+            <p>用户投诉邮箱: tousujubao@163.com   舞弊线索举报邮箱: wubijubao@163.com</p>
+            <p>用户服务协议 | 平台交易规则总则 | 隐私政策</p>
+            <p>c2024南国影城</p>
+            <p></p>
+            <p>
+                <img src="https://p0.meituan.net/moviemachine/e54374ccf134d1f7b2c5b075a74fca525326.png" alt="">
+                <img src="https://p1.meituan.net/moviemachine/805f605d5cf1b1a02a4e3a5e29df003b8376.png" alt="">
+                <img src="https://p0.meituan.net/scarlett/3cd2a9b7dc179531d20d27a5fd686e783787.png" alt="">
+            </p>
         </div>
     </div>
 </template>
@@ -144,8 +163,10 @@ export default {
               "poster3.jpg",
               "poster4.jpg",
 
-            ]
+            ],
+            value: null,
         };
+        
     },
     created() {
         this.getOngoingMovieList();
@@ -341,16 +362,44 @@ h2 {
 
   .poster-image {
     /* 设置图片宽度为海报容器的宽度的 1/4 */
-    width: 500;
+    max-width: 80%;
+    max-height: 120%;
     /* 自适应高度 */
-    height: 400;
-    /* 防止图片超出容器边界 */
-    max-height: 400;
-    /* 垂直居中 */
     display: block;
     margin: 0 auto;
-    /* 防止图片之间产生空隙 */
-    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
+  .footerBox{
+            width: 100%;
+            margin-top: 82px;
+            color: #ccc;
+            padding: 56px 0;
+            background: #221e22;
+            overflow: hidden;
+            p  {
+                text-align: center;
+                font-size: 14px;
+                line-height: 22px;
+                height: 22px;
+            }
+            p:nth-child(1){
+                span{
+                    color: #ef4238;
+                    padding:  0 8px;
+                }
+            }
+            p:nth-child(10){
+                height: 40px;
+                margin-top: 20px;
+                img:nth-child(2){
+                    margin: 0 20px;
+                }
+
+                
+            }
+        }
 </style>

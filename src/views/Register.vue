@@ -1,12 +1,14 @@
 <template>
-  <div class="register-container">
+  <div class="register-container">  
+    <div>
+      <span></span>
+    </div>
     <div class="register-header">
             <div class="register-top"> 
-              <b> 注册影院会员</b>
+              <b>注册影院会员</b>
             </div>
     </div>
     <div class="register-body">
-      
       <el-form class="register-form" ref="registerFormRef" :model="registerForm" :rules="registerFormRules" label-width="80px">
         <el-form-item label="用户名" prop="userName">
           <el-input v-model="registerForm.userName" placeholder="请输入用户名" clearable></el-input>
@@ -32,10 +34,6 @@
           <el-link type="primary" style="line-height: 14px;">《影院注册协议》</el-link>
         </el-form-item>
       </el-form>
-    </div>
-    <div class="footer-mini"></div>
-    <div class="footer">
-      <!-- Copyright©忧伤大白兔 -->
     </div>
   </div>
 </template>
@@ -113,46 +111,51 @@ export default {
 <style scoped>
 .register-container{
   width: 100%;
-  height: 100%;
+  height: 90%;
+  background-size: cover;
+  position: relative;
+  background-image: url("../assets/registerBg.jpg");
 }
+
 
 .header{
   height: 60px;
   border-bottom: deepskyblue solid 2px;
-  padding-top: 6px;
+  padding-top: 100px;
   padding-left: 500px;
   padding-bottom: 0;
   cursor: pointer;
 }
 
 .register-body{
-  /* text-align: center; */
+  text-align: center; 
   padding: 0 400px 0 400px;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+
 }
 
 .register-form{
-  /* width: 40%;
+  width: 40%;
   margin-left: 25%;
-  margin-right: 5%; */
-}
-
-.footer-mini{
-  border-top: 1px solid #EEE;
-  padding-top: 20px;
-  text-align: center;
+  margin-right: 5%;
+  font-size: 25px;
 }
 
 .register-top {
   font-size: 28px;
+  text-align: center; /* 让文本居中 */
+  margin: 20px auto auto auto; /* 设置上下边距，并在水平方向上居中 */
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+
 }
 
 .register-header {
-  width: 100%; text-align: center;margin: 20px 0 20px 0
+  width: 100%; 
+  text-align: center;
+  margin: 20px 0 0px 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+
 }
 
-.footer{
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
+
 </style>

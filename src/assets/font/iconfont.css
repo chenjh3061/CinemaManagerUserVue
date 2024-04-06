@@ -30,11 +30,13 @@
 }
 
 .icon-r-refresh:before {
-  content: "\e61c";
+  content: "";
+  /* \e61c */
 }
 
 .icon-r-yes:before {
-  content: "\e61d";
+  content: "";
+  /* \e61d */
 }
 
 .icon-r-building:before {
@@ -42,7 +44,8 @@
 }
 
 .icon-r-team:before {
-  content: "\e61f";
+  content: "";
+  /* \e61f */
 }
 
 .icon-r-right:before {
@@ -54,7 +57,8 @@
 }
 
 .icon-r-add:before {
-  content: "\e611";
+  content: "";
+  /* \e611 */
 }
 
 .icon-r-edit:before {
@@ -74,7 +78,8 @@
 }
 
 .icon-r-paper:before {
-  content: "\e616";
+  content: "";
+  /* \e616 */
 }
 
 .icon-r-setting:before {

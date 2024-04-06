@@ -3,8 +3,7 @@
         <div class="login_box">
             <div class="title_box">
                 <p>
-                    <i class="iconfont icon-r-team" style="font-size: 36px">
-                    </i>
+                    <i class="el-icon-orange" style="font-size: 36px"></i>
                     欢迎来到南国影城！
                 </p>
             </div>
@@ -20,7 +19,7 @@
                     <el-row>
                         <el-col :span="2">
                             <i
-                                class="iconfont icon-r-user1"
+                                class="el-icon-user"
                                 style="font-size: 28px; color: grey"
                             ></i>
                         </el-col>
@@ -38,7 +37,7 @@
                     <el-row>
                         <el-col :span="2">
                             <i
-                                class="iconfont icon-r-lock"
+                                class="el-icon-edit"
                                 style="font-size: 28px; color: grey"
                             ></i>
                         </el-col>
@@ -52,13 +51,21 @@
                         </el-col>
                     </el-row>
                 </el-form-item>
+                <div class="tips">
+                    <el-radio >
+                        <el-text> 我已阅读并同意《用户服务协议》《隐私政策》</el-text><br>
+                    </el-radio><br>
+                    <span>客服电话：1010-5335</span>
+                </div>
+                
                 <!-- 按扭区域 -->
                 <el-form-item class="btns">
                     <el-button
                         :round="true"
+                        icon="el-icon-success"
                         type="primary"
                         @click="login"
-                        style="font-size: 22px"
+                        style="font-size: 22px; width: 150px;"
                     >
                         登录</el-button
                     >
@@ -206,6 +213,7 @@ export default {
 .title_box {
     text-align: center;
     font-size: 180%;
+    font-family:'sans-serif'
 }
 
 .login_form {
@@ -219,5 +227,37 @@ export default {
 .btns {
     display: flex;
     justify-content: center;
+}
+
+div .tips {
+	/* Font & Text */
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13.6px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	letter-spacing: normal;
+	line-height: 13.6px;
+	text-decoration: none solid rgba(0, 0, 0, 0.5);
+	text-align: left;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+
+
+
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: block;
+	clear: none;
+	z-index: auto;
 }
 </style>
