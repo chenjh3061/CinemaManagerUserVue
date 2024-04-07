@@ -81,10 +81,10 @@
           </tbody>
         </table>
         <div>
-          <h3>优惠列表：</h3>
+          <h3 >优惠列表：</h3>
           <ul>
             <li v-for="(disInfo, index) in discounts" :key="disInfo.id">
-              <label>
+              <label class="discountInfo">
                 <input type="checkbox" @click="(props) => addDis(props, index)" >
                 优惠活动：{{ disInfo.disName }} - {{ disInfo.disOff * 100}}% 折扣
               </label>
@@ -409,6 +409,35 @@ export default {
   font-size: 16px;
   color: #faaf00;
   margin: 5px 5px;
+}
+
+.discountInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.discountInfo input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.discountInfo label {
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.discountInfo label:hover {
+  color: #007bff;
+}
+
+h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .bill-info-status.finish{

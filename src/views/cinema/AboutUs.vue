@@ -1,7 +1,7 @@
 <template>
   <div style="text-align: center;">
     <div class="list-header" style="padding-top: 20px;">
-      <div style="font-size: 26px;"><i class="iconfont icon-r-building" style="font-size: 36px;"> </i> 影院信息</div>
+      <div style="font-size: 26px;"><i class="el-icon-office-building" style="font-size: 36px;"> </i> 影院信息</div>
     </div>
     <div class="list-content" :model="cinemaInfo">
       <div class="list-left">
@@ -21,9 +21,6 @@
             </el-popover>
           </span>
         <br/>
-        <!-- <el-button @click="toChooseSession(cinemaInfo.cinemaId)" type="danger" round style="font-size:22px;" align="left">
-           选座购票
-        </el-button> -->
       </div>
       <div class="list-left-select"></div>
     </div>

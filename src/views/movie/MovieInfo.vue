@@ -25,12 +25,12 @@
               <div style="display: flex;align-items: flex-end;">
                 <span class="box-office">{{movieInfo.movieBoxOffice}}</span>
                 <span class="unit">元</span>
-              <span class="movie-index-title">观影人次</span>
+            </div>
+            <span class="movie-index-title">观影人次</span>
               <div style="display: flex;align-items: flex-end;">
                 <span class="box-office"> {{movieAudience}}</span>
-                <span class="unit"></span>
+                <span class="unit">人</span>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -200,9 +200,7 @@ a{
   padding: 0;
   width: 100%;
   min-width: 1200px;
-  /* background: url('../../assets/movie-info-background.jpg') */
-
-  background: radial-gradient( pink, lightblue);
+  background: url('../../assets/movie-info-background.jpg')
 }
 
 .header-inner{

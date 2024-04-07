@@ -70,7 +70,6 @@
                         >
                             详情
                         </el-button>
-                        <!-- <a  class="order-detail" ></a> -->
                     </div>
                 </div>
             </div>

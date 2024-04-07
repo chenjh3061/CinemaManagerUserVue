@@ -1,6 +1,14 @@
 <template>
   <div>
     <div class="main">
+      <div class="intro">
+        {{ currentDate }}<el-text > 更新</el-text> <br>
+        
+        <span >
+          榜单规则：将昨日国内热映的影片，按照昨日票房从高到低排列，每天上午10点更新。
+        </span>
+
+      </div>
       <div class="board" v-for="(item, index) in totalBoxOfficeList">
         <div class="left">
           <i class="board-index">{{index+1}}</i>
@@ -20,6 +28,8 @@
 </template>
 
 <script>
+import { months } from 'moment'
+
 export default {
   name: "TotalBoxOfficeList",
   data(){
@@ -28,11 +38,13 @@ export default {
         pageNum: 1,
         pageSize: 10
       },
-      totalBoxOfficeList: []
+      totalBoxOfficeList: [],
+      currentDate : '',      
     }
   },
   created() {
     this.getTotalBoxOfficeList()
+    this.getCurrentDate()
   },
   methods:{
     async getTotalBoxOfficeList(){
@@ -40,6 +52,14 @@ export default {
       console.log(resp)
       if(resp.code !== 200) return this.$message.error(resp.msg)
       this.totalBoxOfficeList = resp.data
+    },
+    getCurrentDate() {
+      const currentDate = new Date(); 
+      const year = currentDate.getFullYear(); 
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); 
+      const day = String(currentDate.getDate()).padStart(2, '0'); 
+      // 构建日期字符串，格式为 YYYY-MM-DD
+      this.currentDate = `${year}-${month}-${day}`;
     }
   }
 }
@@ -53,6 +73,10 @@ export default {
   margin-top: 70px;
 }
 
+.intro{
+  align-items: center;
+  text-align: center;
+}
 .board{
   display: flex;
   margin: 25px 0;

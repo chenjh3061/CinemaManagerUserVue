@@ -31,8 +31,15 @@
                             >观影前1小时至观影后1小时内免费停车
                         </div>
                         <div class="service">
-                            <span class="service-tag">领快乐水</span
-                            >节假日期间，每张票可领取一瓶快乐水
+                            <span class="service-tag">免费小吃</span
+                            >节假日期间，每张票可领取一份中杯爆米花
+                        </div>
+                        <div style="margin: 25px 0">
+                            注意事项 ————————————————————
+                        </div>
+                        <div class="service">
+                            <span class="service-tag">安全提醒</span
+                            >影院内禁止吸烟，请留意影院内安全通道
                         </div>
                     </div>
                 </div>
@@ -43,7 +50,7 @@
             <div class="movie-info-detail clearfix">
                 <div class="main-content">
                     <div class="crumbs-nav-container">
-                        <a href="/welcome">兔兔影院</a> &gt;
+                        <a href="/welcome">南国影城</a> &gt;
                         <a href="/aboutUs"> {{ cinemaInfo.cinemaName }}</a>
                     </div>
                     <!-- 影院正在上映的所有电影 -->
@@ -340,7 +347,7 @@ a {
     padding: 0;
     width: 100%;
     min-width: 1200px;
-
+    height: 400px;
     background: radial-gradient(black, grey);
 }
 

@@ -3,9 +3,8 @@
         <el-header>
             <div class="header-inner">
                 <a href="/welcome" style="text-decoration: none">
-                    <div
-                        style="color: black; font-size: 26px; margin-top: 20px"
-                    >
+                    <div class="el-icon-orange" style="color: black; font-size: 26px; margin-top: 20px"
+                            >
                         南国影城
                     </div>
                 </a>
@@ -15,14 +14,12 @@
                     mode="horizontal"
                     :router="true"
                     active-text-color="red"
-                    text-color="#000000"
-                >
+                    text-color="#000000">
                     <el-menu-item
                         :index="item.path"
                         v-for="item in menuList"
                         :key="item.id"
-                        >{{ item.name }}</el-menu-item
-                    >
+                        >{{ item.name }}</el-menu-item>
                 </el-menu>
                 <div class="searchContainer">
                     <el-input

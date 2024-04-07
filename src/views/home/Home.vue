@@ -2,11 +2,10 @@
     <div>
       <!-- 海报宣传栏 -->
     <div class="poster-carousel">
-      <el-carousel indicator-position="outside" :interval="5000" height="500px"
-                    >
+      <el-carousel indicator-position="outside" :interval="5000" height="450px" width="600px">
         <el-carousel-item v-for="(item, index) in posterList" :key="index">
           <img class="poster-image" :src="require(`@/assets/${item}`)" alt="poster" 
-                style="max-width: 80%; max-height: 100%;"/>
+                style="max-width: 75%; max-height: 100%;"/>
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -47,30 +46,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="panel">
-                    <div class="panel-header">
-                        <div id="hot-history">
-                            <b> 热播影片</b>
-                            <span>Hit Film</span>
-                        </div>
-                        <a href="/movie/movieClassics">全部</a>
-                    </div>
-                    <div class="panel-content">
-                        <div class="panel-content">
-                            <movie-item
-                                :movieItem="item"
-                                v-for="(item, index) in classicMovieList"
-                                :key="index"
-                            ></movie-item>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <div class="right">
                 <div class="panel">
                     <div class="panel-header">
                         <div id="account">
-                            <b> 票房榜</b>
+                            <b> 票房榜</b>  <br>
+                            <b>Box office chart</b>
                         </div>
                         <a href="/rankingList/totalBoxOfficeList"
                             >查看完整榜单</a
@@ -231,7 +213,7 @@ export default {
 
 <style scoped>
 .el-carousel {
-    width: 80%;
+    width: 70%;
     margin: 30px auto;
 }
 
@@ -272,8 +254,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*margin-right: 20px;*/
-    /*margin-left: 20px;*/
 }
 
 .movie-item {
@@ -309,8 +289,6 @@ h2 {
 
 .board-middle {
     display: flex;
-    /*align-items: center;*/
-    /*justify-content: center;*/
     margin-left: 10px;
     width: 150px;
     font-size: 18px;
@@ -342,7 +320,6 @@ h2 {
     line-height: 50px;
     text-align: center;
     font-size: 18px;
-    /*font-weight: 700;*/
     align-items: center;
 }
 
@@ -352,19 +329,14 @@ h2 {
 
 .poster-carousel {
     margin: 20px 0;
-    /* 设置为弹性布局，水平排列 */
     display: flex;
-    /* 横向溢出时隐藏 */
     overflow-x: hidden;
-    /* 没有垂直方向的滚动条 */
     overflow-y: hidden;
   }
 
   .poster-image {
-    /* 设置图片宽度为海报容器的宽度的 1/4 */
     max-width: 80%;
     max-height: 120%;
-    /* 自适应高度 */
     display: block;
     margin: 0 auto;
     position: absolute;

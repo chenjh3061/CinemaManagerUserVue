@@ -41,12 +41,9 @@
             <!-- 按条件排序 -->
             <div class="order-by-container">
                 <el-radio v-model="orderByColumn" label="releaseDate"
-                    >按时间排序</el-radio
-                >
-                <!--        <el-radio v-model="orderByColumn" label="movieScore">按评价排序</el-radio>-->
+                    >按时间排序</el-radio>
+                <!-- <el-radio v-model="orderByColumn" label="movieScore">按热门排序</el-radio> -->
             </div>
-
-            <!--      <router-view :movieCategoryId="categoryRadio" :movieAreaId="areaRadio" :movieAgeId="ageRadio" :orderByColumn="orderByColumn"></router-view>-->
             <router-view
                 :movieCategoryId="categoryRadio"
                 :orderByColumn="orderByColumn"

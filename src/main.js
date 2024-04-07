@@ -1,8 +1,3 @@
-/*
- * @Description: 
- * @Author: Rabbiter
- * @Date: 2023-02-24 18:08:34
- */
 import Vue from 'vue'
 import './plugins/axios'
 import App from './App.vue'

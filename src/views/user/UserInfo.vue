@@ -153,8 +153,7 @@ export default {
         // 根据用户选择的身份进行相应的处理
       if (this.loginUser.userIdentity === 1) {
         // 执行学生认证的操作，比如弹出上传学生证的小窗口
-        // 你需要根据实际情况添加学生认证的逻辑
-        // 比如 this.uploadStudentIDCard()
+
         const confirmResult = this.$confirm('确定进行学生认证吗？', '学生认证', {
           confirmButtonText: '确认',
           cancelButtonText: '取消',
