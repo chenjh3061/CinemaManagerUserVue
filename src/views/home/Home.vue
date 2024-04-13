@@ -9,7 +9,6 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-
         <div class="whole">
             <div class="left">
                 <div class="panel">
